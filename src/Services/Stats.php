@@ -32,7 +32,7 @@ class Stats
                 'sent_emails' => SentEmail::whereEmail($email)->get(),
                 'deliveries' => SentEmail::whereEmail($email)->whereNotNull('delivered_at')->get(),
                 'opens' => EmailOpen::whereEmail($email)->whereNotNull('opened_at')->get(),
-                'bounces' => EmailComplaint::whereEmail($email)->whereNotNull('bounced_at')->get(),
+                'bounces' => EmailBounce::whereEmail($email)->whereNotNull('bounced_at')->get(),
                 'complaints' => EmailComplaint::whereEmail($email)->whereNotNull('complained_at')->get(),
                 'click_throughs' => EmailLink::join(
                     'laravel_ses_sent_emails',
