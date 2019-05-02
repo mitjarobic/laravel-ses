@@ -29,7 +29,7 @@
         "ramsey/uuid": "^3.7",
         "Nesbot/Carbon": "^1.22",
         "guzzlehttp/guzzle": "~6.0",
-        "paquettg/php-html-parser": "^1.7",
+        "paquettg/php-html-parser": "dev-master",
         "aws/aws-php-sns-message-validator": "^1.4",
         "symfony/psr-http-message-bridge": "^1.0",
         "zendframework/zend-diactoros": "^1.7"
@@ -61,5 +61,11 @@
         }
     },
     "prefer-stable": true,
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/thesoftwarefanatics/php-html-parser"
+        }
+    ]
 }
