@@ -44,7 +44,13 @@ class BounceController extends BaseController
             return response()->json(['success' => true]);
         }
 
+
         $message = json_decode($result->Message);
+
+        //if subcription confirmed by amazon
+        if($message->notificationType == 'AmazonSnsSubscriptionSucceeded'){
+            return response()->json(['success' => true]);
+        }
 
         $messageId = $message
             ->mail
